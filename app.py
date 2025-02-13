@@ -57,7 +57,22 @@ def predict_neurotransmitter_levels(drug_type, dose, frequency, duration):
 def main():
     st.image("drugs.jpg")
     st.title("Neurotransmitter Level Prediction")
-    st.markdown("Enter details about drug exposure to predict neurotransmitter levels.")
+    
+    # Add Description
+    st.markdown("""
+    ### **Description**  
+    This AI-powered model predicts neurotransmitter levels (Dopamine, Serotonin, GABA, and Glutamate) based on drug type, dosage, frequency, and duration of drug use.  
+    Understanding neurotransmitter changes can help in mental health research, addiction studies, and pharmacology.  
+
+    ### **How to Use**  
+    - Select the drug type from the dropdown list.  
+    - Adjust the sliders to specify dose (mg), frequency of use per week, and duration in months.  
+    - Click "Predict" to estimate the neurotransmitter levels.  
+
+    ### **Use Case**  
+    - Helps researchers analyze how different substances influence neurotransmitter levels.  
+    - Useful in addiction research, mental health studies, and drug development.  
+    """)
     
     # User inputs
     drug_type = st.selectbox("Select Drug Type", df['Drug Type'].unique())
